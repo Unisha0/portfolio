@@ -8,7 +8,7 @@ A modern, interactive portfolio website built with React, TypeScript, Three.js, 
 
 ## 🚀 Live Demo
 
-[unishachaulagain.com](https://unishachaulagain.com)
+[unishachaulagain.com](https://unishachaulagain.com.np)
 
 ---
 
