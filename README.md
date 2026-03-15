@@ -2,7 +2,7 @@
 
 A modern, interactive portfolio website built with React, TypeScript, Three.js, and GSAP.
 
-![Portfolio Preview](./public/images/preview.png)
+![Portfolio Preview](public/images/preview.png)
 
 ---
 
