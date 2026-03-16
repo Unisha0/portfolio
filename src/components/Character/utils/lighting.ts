@@ -18,12 +18,13 @@ const setLighting = (scene: THREE.Scene) => {
   pointLight.castShadow = true;
   scene.add(pointLight);
 
+  scene.environmentIntensity = 0;
+
   new RGBELoader()
     .setPath("/models/")
     .load("char_enviorment.hdr?v=2", function (texture) {
       texture.mapping = THREE.EquirectangularReflectionMapping;
       scene.environment = texture;
-      scene.environmentIntensity = 0;
       scene.environmentRotation.set(5.76, 85.85, 1);
     });
 
