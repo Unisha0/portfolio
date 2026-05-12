@@ -5,7 +5,7 @@ Personal portfolio website of Unisha Chaulagain.
 ![Portfolio Preview](public/images/preview.png)
 
 ## LIVE DEMO 
-https://portfolio-one-blond-r94kxtu65r.vercel.app/
+https://unisha-chaulagain.vercel.app/
 
 ## About
 
