@@ -1,43 +1,80 @@
-import { useState } from 'react'
-import './styles/Navbar.css'
+import { useEffect } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import HoverLinks from "./HoverLinks";
+import { gsap } from "gsap";
+import { ScrollSmoother } from "gsap/ScrollSmoother";
+import "./styles/Navbar.css";
+
+gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
+export let smoother: ScrollSmoother;
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false)
+  useEffect(() => {
+    smoother = ScrollSmoother.create({
+      wrapper: "#smooth-wrapper",
+      content: "#smooth-content",
+      smooth: 1.7,
+      speed: 1.7,
+      effects: true,
+      autoResize: true,
+      ignoreMobileResize: true,
+    });
 
-  const closeMenu = () => setMenuOpen(false)
+    smoother.scrollTop(0);
 
+    let links = document.querySelectorAll(".header ul a");
+    links.forEach((elem) => {
+      let element = elem as HTMLAnchorElement;
+      element.addEventListener("click", (e) => {
+        if (window.innerWidth > 1024) {
+          e.preventDefault();
+          let elem = e.currentTarget as HTMLAnchorElement;
+          let section = elem.getAttribute("data-href");
+          smoother.scrollTo(section, true, "top top");
+        }
+      });
+    });
+    window.addEventListener("resize", () => {
+      ScrollSmoother.refresh(true);
+    });
+  }, []);
   return (
-    <nav className="navbar">
-      <div className="navbar-inner section-container">
-        <a href="#hero" className="navbar-logo">UC</a>
-
-        <ul className="navbar-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-
-        <button
-          className="navbar-hamburger"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle navigation menu"
-          aria-expanded={menuOpen}
+    <>
+      <div className="header">
+        <a href="/#" className="navbar-title" data-cursor="disable">
+          UC
+        </a>
+        <a
+          href="mailto:yunishachaulagain001@gmail.com"
+          className="navbar-connect"
+          data-cursor="disable"
         >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+          yunishachaulagain001@gmail.com
+        </a>
+        <ul>
+          <li>
+            <a data-href="#about" href="#about">
+              <HoverLinks text="ABOUT" />
+            </a>
+          </li>
+          <li>
+            <a data-href="#work" href="#work">
+              <HoverLinks text="WORK" />
+            </a>
+          </li>
+          <li>
+            <a data-href="#contact" href="#contact">
+              <HoverLinks text="CONTACT" />
+            </a>
+          </li>
+        </ul>
       </div>
 
-      {menuOpen && (
-        <div className="navbar-dropdown">
-          <a href="#about" onClick={closeMenu}>About</a>
-          <a href="#work" onClick={closeMenu}>Work</a>
-          <a href="#contact" onClick={closeMenu}>Contact</a>
-        </div>
-      )}
-    </nav>
-  )
-}
+      <div className="landing-circle1"></div>
+      <div className="landing-circle2"></div>
+      <div className="nav-fade"></div>
+    </>
+  );
+};
 
-export default Navbar
+export default Navbar;

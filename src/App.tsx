@@ -1,28 +1,17 @@
-import './App.css'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import About from './components/About'
-import WhatIDo from './components/WhatIDo'
-import TechStack from './components/TechStack'
-import Career from './components/Career'
-import Work from './components/Work'
-import Contact from './components/Contact'
+import { lazy, Suspense } from "react";
+import "./App.css";
+import { LoadingProvider } from "./context/LoadingProvider";
+
+const MainContainer = lazy(() => import("./components/MainContainer"));
 
 const App = () => {
   return (
-    <>
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <WhatIDo />
-        <TechStack />
-        <Career />
-        <Work />
-        <Contact />
-      </main>
-    </>
-  )
-}
+    <LoadingProvider>
+      <Suspense>
+        <MainContainer />
+      </Suspense>
+    </LoadingProvider>
+  );
+};
 
-export default App
+export default App;

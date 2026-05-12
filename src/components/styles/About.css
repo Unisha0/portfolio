@@ -1,75 +1,71 @@
 .about-section {
-  padding: 100px 0;
-  background-color: var(--bg-secondary);
-}
-
-.about-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: start;
-}
-
-.about-heading {
-  font-size: 36px;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 24px;
-}
-
-.about-para {
-  font-size: 16px;
-  color: var(--text-secondary);
-  line-height: 1.8;
-  margin-bottom: 16px;
-}
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.about-info-item {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding: 18px 24px;
-  border-bottom: 1px solid var(--border);
+  align-items: center;
+  justify-content: left;
+  place-items: center;
+  position: relative;
+  opacity: 1;
+  height: auto;
+  width: var(--cWidth);
+  margin: auto;
 }
-
-.about-info-item:last-child {
-  border-bottom: none;
+.about-me {
+  padding: 50px 0px;
+  padding-bottom: 0;
+  width: 500px;
+  max-width: calc(100% - 15px);
 }
-
-.about-info-label {
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--text-secondary);
+.about-me h3 {
+  font-size: 25px;
   text-transform: uppercase;
+  letter-spacing: 7px;
+  font-weight: 400;
+  color: var(--accentColor);
+}
+
+.about-me p {
+  font-size: 33px;
+  font-weight: 600;
+  line-height: 36px;
   letter-spacing: 1px;
 }
 
-.about-info-value {
-  font-size: 15px;
-  font-weight: 500;
-  color: var(--text-primary);
-}
-
-.about-status {
-  color: var(--accent);
-}
-
-@media (max-width: 900px) {
-  .about-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
+@media only screen and (min-width: 600px) {
   .about-section {
-    padding: 70px 0;
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .about-me {
+    width: 500px;
+    max-width: calc(100% - 70px);
+    transform: translateY(0%);
+  }
+  .about-section {
+    opacity: 1;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .about-section {
+    width: var(--cWidth);
+    justify-content: right;
+    max-width: 1920px;
+    height: var(--vh);
+    padding: 0px;
+    opacity: 1;
+  }
+  .about-me {
+    padding: 0px;
+    width: 50%;
+  }
+  .about-me p {
+    font-size: 1.9vw;
+    line-height: 2.3vw;
+  }
+}
+@media only screen and (min-width: 1950px) {
+  .about-me p {
+    font-size: 2.5rem;
+    line-height: 2.7rem;
   }
 }
