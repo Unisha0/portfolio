@@ -23,7 +23,7 @@ export default function handleResize(
 
   const workTrigger = ScrollTrigger.getById("work");
   ScrollTrigger.getAll().forEach((trigger) => {
-    if (trigger !== workTrigger) {
+    if (!workTrigger || trigger !== workTrigger) {
       trigger.kill();
     }
   });
