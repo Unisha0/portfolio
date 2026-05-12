@@ -4,6 +4,9 @@ Personal portfolio website of Unisha Chaulagain.
 
 ![Portfolio Preview](public/images/preview.png)
 
+## LIVE DEMO 
+https://portfolio-one-blond-r94kxtu65r.vercel.app/
+
 ## About
 
 Computer Engineering Student | AI & ML Enthusiast | Full-Stack Developer
@@ -41,6 +44,8 @@ This project is deployed on **Vercel**. To deploy your own instance:
 3. Vercel will auto-detect the Vite + React setup and deploy
 
 No additional configuration is needed — Vercel handles the build automatically.
+
+
 
 ## Featured Projects
 
