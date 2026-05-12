@@ -1,141 +1,68 @@
-# ✨ Unisha Chaulagain — Portfolio
+# UNISHA-PORTFOLIO
 
-A modern, interactive portfolio website built with React, TypeScript, Three.js, and GSAP.
+Personal portfolio website of Unisha Chaulagain.
 
 ![Portfolio Preview](public/images/preview.png)
 
+## About
 
----
+Computer Engineering Student | AI & ML Enthusiast | Full-Stack Developer
 
-## 🛠️ Tech Stack
+This portfolio showcases my work in Django development, AI/ML applications,
+and IoT-based systems. It highlights practical projects that focus on
+problem-solving, real-world use cases, and user-friendly interfaces.
 
-| Technology | Purpose |
-|------------|---------|
-| **React** | UI Framework |
-| **TypeScript** | Type Safety |
-| **Three.js** | 3D Character Rendering |
-| **GSAP** | Smooth Animations & Scroll Effects |
-| **ScrollSmoother** | Buttery Smooth Scrolling |
-| **Vite** | Fast Build Tool |
-| **CSS** | Custom Styling |
+## Tech Stack
 
----
+React, TypeScript, GSAP (ScrollSmoother, SplitText, ScrollTrigger), Three.js, HTML, CSS
 
-## ✨ Features
+## Features
 
-- 🎭 **Interactive 3D Character** — Follows cursor movement in real-time
-- 🎞️ **Smooth Scroll Animations** — Powered by GSAP ScrollTrigger & ScrollSmoother
-- 📱 **Fully Responsive** — Optimized for desktop, tablet, and mobile
-- ⚡ **Fast Performance** — Built with Vite for blazing fast load times
-- 🎨 **Custom Cursor** — Unique hover interactions throughout the site
-- 🌙 **Modern UI/UX** — Clean, minimal design with smooth transitions
+- Custom animated cursor
+- Smooth scroll powered by GSAP ScrollSmoother
+- Split-text entrance animations
+- Interactive social icons with magnetic hover effect
+- Tech stack physics visualization (Three.js + Rapier)
+- Responsive design
 
----
-
-## 📂 Project Structure
-
-```
-unisha-portfolio/
-├── public/
-│   ├── draco/            # Draco decoder for 3D model compression
-│   ├── images/           # Static images
-│   └── models/           # 3D character model & environment
-├── src/
-│   ├── components/
-│   │   ├── Character/    # Three.js 3D character scene
-│   │   ├── Navbar.tsx    # Navigation bar
-│   │   ├── HoverLinks.tsx
-│   │   ├── Loading.tsx
-│   │   └── styles/       # Component styles
-│   ├── context/          # React context providers
-│   ├── App.tsx           # Main app component
-│   └── main.tsx          # Entry point
-├── package.json
-├── tsconfig.json
-├── vite.config.ts
-└── README.md
-```
-
----
-
-## 🏁 Getting Started
-
-### Prerequisites
-
-- **Node.js** >= 18.x
-- **npm** >= 9.x
-
-### Installation
+## Getting Started
 
 ```bash
-# Clone the repository
-git clone https://github.com/Unisha0/portfolio.git
-
-# Navigate to the project
-cd portfolio
-
-# Install dependencies
 npm install
-
-# Start the development server
 npm run dev
 ```
 
-The app will be running at `http://localhost:5173`
+## Deployment
 
-### Build for Production
+This project is deployed on **Vercel**. To deploy your own instance:
 
-```bash
-npm run build
-```
+1. Push your fork to GitHub
+2. Import the repository on [vercel.com](https://vercel.com)
+3. Vercel will auto-detect the Vite + React setup and deploy
 
-### Preview Production Build
+No additional configuration is needed — Vercel handles the build automatically.
 
-```bash
-npm run preview
-```
+## Featured Projects
 
----
+- Smart Health Emergency Assistance
+- Fine-tuned GPT-2 RAG
+- AI Training With 10 Projects
+- Civic Connect
+- Tour Booking System
 
-## 📸 Screenshots
+## Skills
 
-### Landing Page
-> Interactive 3D character with smooth scroll animations
+- Languages: Python, JavaScript, TypeScript, C, C++
+- Frameworks/Tools: Django, React, Streamlit, TensorFlow, PyTorch, Git, GitHub
+- Interests: Artificial Intelligence, Machine Learning, Computer Vision,
+  Full-Stack Web Development
 
-### About Section
-> Skills, experience, and personal introduction
+## Social Links
 
-### Work Section
-> Featured projects with hover effects
+- GitHub: https://github.com/Unisha0
+- LinkedIn: https://www.linkedin.com/in/unisha-chaulagain/
+- Instagram: https://www.instagram.com/partofyune_sha/
 
-### Contact Section
-> Get in touch form and social links
+## License
 
----
-
-## 📬 Contact
-
-- **Email:** [yunishachaulagain001@gmail.com](mailto:yunishachaulagain001@gmail.com)
-- **GitHub:** [@Unisha0](https://github.com/Unisha0)
-- **LinkedIn:** [Unisha Chaulagain](https://linkedin.com/in/unisha-chaulagain)
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License**.
-
-MIT License
-
-Copyright (c) 2026 Unisha Chaulagain
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
+This project is open source and available under the [MIT License](LICENSE).
