@@ -4,11 +4,6 @@ A modern, interactive portfolio website built with React, TypeScript, Three.js, 
 
 ![Portfolio Preview](public/images/preview.png)
 
----
-
-## 🚀 Live Demo
-
-[unishachaulagain.com.np](https://unishachaulagain.com.np)
 
 ---
 
