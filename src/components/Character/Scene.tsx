@@ -11,7 +11,7 @@ import {
   handleTouchMove,
 } from "./utils/mouseUtils";
 import setAnimations from "./utils/animationUtils";
-import { setProgress } from "../utils/loadingProgress";
+import { setProgress } from "../Loading";
 
 const Scene = () => {
   const canvasDiv = useRef<HTMLDivElement | null>(null);
@@ -75,7 +75,7 @@ const Scene = () => {
         headBone = character.getObjectByName("spine006") || null;
         screenLight = character.getObjectByName("screenlight") || null;
 
-        progress.completeLoading().then(() => {
+        progress.loaded().then(() => {
           window.setTimeout(() => {
             light.turnOnLights();
             animations.startIntro();
