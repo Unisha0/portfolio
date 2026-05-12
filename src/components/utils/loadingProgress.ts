@@ -19,7 +19,7 @@ export const setProgress = (setLoading: (value: number) => void) => {
     }, 2000);
   }, 100);
 
-  function loaded() {
+  function completeLoading() {
     return new Promise<number>((resolve) => {
       clearInterval(interval);
       interval = window.setInterval(() => {
@@ -35,5 +35,5 @@ export const setProgress = (setLoading: (value: number) => void) => {
     });
   }
 
-  return { loaded, percent };
+  return { completeLoading, percent };
 };
