@@ -1,11 +1,13 @@
 import { SplitText } from "gsap/SplitText";
 import gsap from "gsap";
+import { smoother } from "../Navbar";
 
 export function initialFX() {
   document.body.style.overflowY = "auto";
+  smoother.paused(false);
   document.getElementsByTagName("main")[0].classList.add("main-active");
   gsap.to("body", {
-    backgroundColor: "#0a0e17",
+    backgroundColor: "#0b080c",
     duration: 0.5,
     delay: 1,
   });
